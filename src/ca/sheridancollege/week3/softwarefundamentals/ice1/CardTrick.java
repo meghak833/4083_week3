@@ -39,7 +39,23 @@ public class CardTrick {
             
             //printing suit and value of card
              System.out.println(c.getSuit() + " " + c.getValue());
-         
+         System.out.println(c.getSuit() + " " + c.getValue());
+         //Add it to MagicHand Array of card
+         magicHand[i] = c;
+         for (int a = 0; a < magicHand.length; a++) {
+
+            if ((userValue == magicHand[a].getValue()) && (userSuite == magicHand[a].getSuit())) {
+               System.out.println("card present");
+            }
+            else {
+               System.out.println("card do not match");
+               break;
+            }
+
+         }
+       Card luckyCard=new Card();
+         luckyCard.setValue(7);
+         luckyCard.setSuit("Hearts");
  
         
         
