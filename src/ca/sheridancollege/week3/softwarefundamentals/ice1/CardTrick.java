@@ -25,6 +25,8 @@ public class CardTrick {
             c.setSuit(Card.SUITS[(int)(Math.random()*3+0)]);
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            System.out.println(c.getSuit());
+            System.out.println(c.getValue());
         }
        
         //insert code to ask the user for Card value and  or Hard code it, create their card
