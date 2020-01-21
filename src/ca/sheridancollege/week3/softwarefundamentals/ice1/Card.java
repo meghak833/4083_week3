@@ -48,6 +48,10 @@ public class Card {
         this.value = value;
     }
    
-   
+    @Override
+   public String toString()
+   {
+       return("The random card is:"+this.getValue()+this.getSuit());
+   }
     
 }
