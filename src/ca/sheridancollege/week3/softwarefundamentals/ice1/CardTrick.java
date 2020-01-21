@@ -28,6 +28,12 @@ public class CardTrick {
         }
         
         
+        
+             for (int i=0; i<magicHand.length; i++)
+            {
+                System.out.println(magicHand[i]);
+            }
+        
             System.out.println("Pick a Suite");
             Scanner scanner = new Scanner(System.in);
             String suite = scanner.nextLine();
