@@ -52,7 +52,9 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
+        
         Card userLuckyCard = new Card();
+        //Code to input user's lucky card suit 
         System.out.println("Inpur your lucky card suit : " + 
                 "\n 0 for Hearts \n 1 for Diamonds \n 2 for Spades \n 3 for Clubs");
         int userLuckyCardSuit = scanner.nextInt();
@@ -64,20 +66,22 @@ public class CardTrick {
         }
         userLuckyCard.setSuit(Card.SUITS[userLuckyCardSuit]);
         
+        //code to input user's lucky card value
         System.out.println("Inpur your lucky card value between 1 - 13 : "); 
         int userLuckyCardValue = scanner.nextInt();
         while(userLuckyCardValue < 1 || userLuckyCardValue > 13){
             System.out.println("Wrong value!!! \nInpur your lucky card value between 0 - 13 : ");
-                userLuckyCardValue = scanner.nextInt();
-                
+                userLuckyCardValue = scanner.nextInt();         
         }
-                
+        
+        //set card suits and card value to the card object using setter method
         userLuckyCard.setSuit(Card.SUITS[userLuckyCardSuit]);
         userLuckyCard.setValue(userLuckyCardValue);
+            
+        //Then report the result here
+         //print user's lucky card 
         System.out.println("User's Lucky Card is : "+Card.CARD_VALUES[userLuckyCard.getValue()]  + " of " + userLuckyCard.getSuit());
         
-        
-        //Then report the result here
         
     }
 
