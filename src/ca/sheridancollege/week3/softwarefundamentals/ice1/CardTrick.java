@@ -27,7 +27,11 @@ public class CardTrick {
             System.out.println(c.getSuit());
             System.out.println(c.getValue());
         }
-           
+           Card manualHand = new Card();
+           manualHand.setValue(4);
+           manualHand.setSuit("Spades");
+           System.out.println(manualHand.getSuit());
+           System.out.println(manualHand.getValue());
             
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
@@ -38,4 +42,4 @@ public class CardTrick {
         //Then report the result here
     }
     
-}
+
