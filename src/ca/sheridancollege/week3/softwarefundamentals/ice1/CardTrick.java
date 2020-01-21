@@ -31,18 +31,22 @@ public class CardTrick {
             String suitValue;
             if(randomSuitValue == 0){
                 suitValue = "Hearts";
+                c.setSuit(Card.SUITS[0]);
             }
             else if(randomSuitValue == 1){
                 suitValue = "Diamonds";
+                c.setSuit(Card.SUITS[1]);
             }
             else if(randomSuitValue == 2){
                 suitValue = "Spades";
+                c.setSuit(Card.SUITS[2]);
             }
             else if(randomSuitValue == 3){
                 suitValue = "Clubs";
+                c.setSuit(Card.SUITS[3]);
             }
-            c.setSuit(Card.SUITS[randomSuitValue]);
-            System.out.println(randomCardValue + " " + randomSuitValue);
+//            c.setSuit(Card.SUITS[randomSuitValue]);
+            System.out.println( c.getSuit()  + " " + c.getValue() );
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
