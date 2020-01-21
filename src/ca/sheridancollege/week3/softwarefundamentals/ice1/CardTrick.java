@@ -24,8 +24,10 @@ public class CardTrick {
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            //c.setValue(value());
-            // c.setSuit(Card.SUITS[suit()]);
+            c.setValue(value());
+            c.setSuit(Card.SUITS[suit()]);
+            
+            system.out.println(c.getValue() + " of " + c.getSuit());
 
         }
 
