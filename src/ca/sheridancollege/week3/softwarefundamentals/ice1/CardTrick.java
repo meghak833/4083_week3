@@ -13,6 +13,7 @@ import java.util.Random;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author Megha Patel
  * @modifer Venkatesh Sritharan
+ * ID: 991558184
  */
 public class CardTrick {
     
@@ -20,17 +21,7 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
-        Scanner input = new Scanner(System.in);
-        
-        System.out.println("Enter card value: ");
-        int userValue = input.nextInt();
-        
-        
-        
-        
-        
-        
-        
+        //insert code to ask the user for Card value and  or Hard code it, create their card
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -43,11 +34,14 @@ public class CardTrick {
             
             c.setValue(value);
             //c.setValue(insert call to random number generator here)
+            int suitNo = rand.nextInt((3 - 0) + 1) + 0;
+            c.setSuit(Card.SUITS[suitNo]);
             
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-        }
+            //printing suit and value of card
+             System.out.println(c.getSuit() + " " + c.getValue());
+         
+ 
         
-        //insert code to ask the user for Card value and  or Hard code it, create their card
         
         //Then report the result here
     }
