@@ -12,8 +12,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * @author Steven Michalec / 991 228 778
  */
 
-import java.util.Scanner;
-import java.util.Random;
+import java.util.*;
 
 public class CardTrick {
     
@@ -39,13 +38,17 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter an Card value: ");
-        int cardNumber = input.nextInt();
-        System.out.println("Enter a suit Value between 0-3: ");
-        int suitNumber = input.nextInt();
+        Card userCard = new Card();
         
-        // and search magicHand here
-        // Then report the result here
+        System.out.println("Enter an Card value: ");
+        userCard.setValue(input.nextInt());
+        input.nextLine();
+        System.out.println("Enter a suit: ");
+        userCard.setSuit(input.nextLine());
+        
+        System.out.println("You have picked the " + userCard.getValue() + " of "
+                + userCard.getSuit());
+        
     }
     
 }
