@@ -16,17 +16,27 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        
+       
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
+            int randomValue = CardTrick.getRandom();
+            c.setValue(randomValue);
+            
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setSuit(Card.SUITS[0]);
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
         
         //Then report the result here
+        
+    }
+    public static int getRandom(){
+        int randomNumber;
+        randomNumber = (int)( Math.random() * 13) + 1;
+        return randomNumber;
     }
     
 }
