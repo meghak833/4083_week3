@@ -4,7 +4,15 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
-
+/**
+ * A class that models playing card Objects. Cards have 
+ * a value (note that Ace = 1, Jack -11, Queen =12, King = 13)
+ * A suit (clubs, hearts, spades, diamonds).
+ * There are 52 cards in a deck, no jokers.
+ * This code is to be used in ICE1. When you create your own branch,
+ * add your name as a modifier.
+ * @author Shankar Ghimire
+ */
 import java.util.Scanner;
 
 /**
@@ -22,31 +30,27 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
+            //code to generate random number for card value
             //c.setValue(insert call to random number generator here)
-            int randomCardValue = CardTrick.getRandomCard();
+            int randomCardValue = (int)( Math.random() * 13) + 1;
             c.setValue(randomCardValue);
             
+            //code to generate random number for card suits
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            int randomSuitValue = CardTrick.getRandomSuits();
-            String suitValue;
-            if(randomSuitValue == 0){
-                suitValue = "Hearts";
+            int randomSuitValue = (int)( Math.random() * 4);
+            if(randomSuitValue == 0){             
                 c.setSuit(Card.SUITS[0]);
             }
             else if(randomSuitValue == 1){
-                suitValue = "Diamonds";
                 c.setSuit(Card.SUITS[1]);
             }
             else if(randomSuitValue == 2){
-                suitValue = "Spades";
                 c.setSuit(Card.SUITS[2]);
             }
             else if(randomSuitValue == 3){
-                suitValue = "Clubs";
                 c.setSuit(Card.SUITS[3]);
             }
-//            c.setSuit(Card.SUITS[randomSuitValue]);
-            System.out.println( c.getSuit()  + " " + c.getValue() );
+
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
@@ -54,15 +58,6 @@ public class CardTrick {
         //Then report the result here
         
     }
-    public static int getRandomCard(){
-        int randomNumber;
-        randomNumber = (int)( Math.random() * 13) + 1;
-        return randomNumber;
-    }
-    public static int getRandomSuits(){
-        int randomNumber ;
-        randomNumber = (int)( Math.random() * 4) ;
-        return randomNumber;
-    }
+
     
 }
