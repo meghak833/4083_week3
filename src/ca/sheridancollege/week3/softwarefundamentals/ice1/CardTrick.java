@@ -17,6 +17,7 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
+        Scanner scanner = new Scanner(System.in);
        
         for (int i=0; i<magicHand.length; i++)
         {
@@ -41,14 +42,40 @@ public class CardTrick {
             else if(randomSuitValue == 3){
                 c.setSuit(Card.SUITS[3]);
             }
+            magicHand[i] = c;
         }
         //Code to print the 7 deck of randomly generated cards
-
+        System.out.println("Suit - Value");
+        System.out.println("------------------");
         for(int i = 0; i< magicHand.length; i++){
-            System.out.println(magicHand[i].getSuit() +" - " + magicHand[i].getValue());
+            System.out.println(magicHand[i].getSuit() +" - " + Card.CARD_VALUES[magicHand[i].getValue()] );
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
+        Card userLuckyCard = new Card();
+        System.out.println("Inpur your lucky card suit : " + 
+                "\n 0 for Hearts \n 1 for Diamonds \n 2 for Spades \n 3 for Clubs");
+        int userLuckyCardSuit = scanner.nextInt();
+        while(userLuckyCardSuit < 0 || userLuckyCardSuit > 3){
+            System.out.println("Wrong value!!! \nInpur your lucky card suit : " + 
+                "\n 0 for Hearts \n 1 for Diamonds \n 2 for Spades \n 3 for Clubs");
+                userLuckyCardSuit = scanner.nextInt();
+                
+        }
+        userLuckyCard.setSuit(Card.SUITS[userLuckyCardSuit]);
+        
+        System.out.println("Inpur your lucky card value between 1 - 13 : "); 
+        int userLuckyCardValue = scanner.nextInt();
+        while(userLuckyCardValue < 1 || userLuckyCardValue > 13){
+            System.out.println("Wrong value!!! \nInpur your lucky card value between 0 - 13 : ");
+                userLuckyCardValue = scanner.nextInt();
+                
+        }
+                
+        userLuckyCard.setSuit(Card.SUITS[userLuckyCardSuit]);
+        userLuckyCard.setValue(userLuckyCardValue);
+        System.out.println("User's Lucky Card is : "+Card.CARD_VALUES[userLuckyCard.getValue()]  + " of " + userLuckyCard.getSuit());
+        
         
         //Then report the result here
         
