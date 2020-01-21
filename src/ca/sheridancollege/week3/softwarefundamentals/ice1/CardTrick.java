@@ -32,16 +32,16 @@ public class CardTrick {
             c.setSuit(Card.SUITS[randomNum]);
             switch (randomNum) {
                 case 0:
-                    System.out.println("Hearths");
+                    System.out.println("You got " + c.getValue + " of Hearths");
                     break;
                 case 1:
-                    System.out.println("Diamonds");
+                    System.out.println("You got " + c.getValue + "Diamonds");
                     break;
                 case 2:
-                    System.out.println("Spades");
+                    System.out.println("You got " + c.getValue + "Spades");
                     break;
                 default:
-                    System.out.println("Clubs");
+                    System.out.println("You got " + c.getValue + "Clubs");
                     break;
             }
            
