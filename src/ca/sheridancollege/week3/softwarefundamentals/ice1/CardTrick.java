@@ -26,9 +26,13 @@ public class CardTrick {
             int rand = (int) (Math.random() * 3);
             c.setSuit((Card.SUITS[rand]));
             
-            System.out.println("Card value is: " + c.getValue());
-            System.out.println("Card suit is: " + c.getSuit());
+            System.out.println("Card value is " + c.getValue() + " suit is " + c.getSuit());
         }
+        
+        int userValue = 8;
+            String userSuit = "diamond";
+            System.out.println("User's lucky card is the " + userValue + " of " 
+                    + userSuit);
   
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
