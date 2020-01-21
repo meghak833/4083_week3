@@ -30,7 +30,7 @@ public class CardTrick {
         }
         
         int userValue = 8;
-            String userSuit = "diamond";
+            String userSuit = "diamonds";
             System.out.println("User's lucky card is the " + userValue + " of " 
                     + userSuit);
   
