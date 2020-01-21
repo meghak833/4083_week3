@@ -28,8 +28,12 @@ public class CardTrick {
           
             c.setValue(random1);
             c.setSuit(Card.SUITS[random2]);
-
             
+            
+            System.out.println(c.getValue());
+            System.out.println(c.getSuit());
+
+             
 
         }
         Card c2 =new Card();
