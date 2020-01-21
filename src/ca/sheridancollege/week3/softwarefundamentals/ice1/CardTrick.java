@@ -23,10 +23,8 @@ public class CardTrick {
         {
             Card c = new Card();
             c.setValue((int) (Math.random() * 13 + 1));
-            System.out.println("Card value is: " + c.getValue());
             int rand = (int) (Math.random() * 3);
             c.setSuit((Card.SUITS[rand]));
-            System.out.println("Card suit is: " + c.getSuit());
         }
   
         //insert code to ask the user for Card value and suit, create their card
