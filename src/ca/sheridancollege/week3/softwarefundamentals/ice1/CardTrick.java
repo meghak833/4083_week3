@@ -20,8 +20,10 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setValue((int)Math.random());
+            for(int j =0; j<magicHand.length; j++){
+            c.setSuit(Card.SUITS[j]) = ((int)Math.random()*13 + 1);
+            }
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
