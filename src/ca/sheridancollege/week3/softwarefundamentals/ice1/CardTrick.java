@@ -21,11 +21,13 @@ public class CardTrick {
         {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
-            int randomValue = CardTrick.getRandom();
-            c.setValue(randomValue);
+            int randomCardValue = CardTrick.getRandomCard();
+            c.setValue(randomCardValue);
             
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            c.setSuit(Card.SUITS[0]);
+            int randomSuitValue = CardTrick.getRandomSuits();
+            c.setSuit(Card.SUITS[randomSuitValue]);
+//            System.out.println(randomCardValue + " " + randomSuitValue);
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
@@ -33,9 +35,14 @@ public class CardTrick {
         //Then report the result here
         
     }
-    public static int getRandom(){
+    public static int getRandomCard(){
         int randomNumber;
         randomNumber = (int)( Math.random() * 13) + 1;
+        return randomNumber;
+    }
+    public static int getRandomSuits(){
+        int randomNumber ;
+        randomNumber = (int)( Math.random() * 4) ;
         return randomNumber;
     }
     
