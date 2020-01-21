@@ -16,13 +16,14 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
+        //to print the 7 cards
+        System.out.println("The hand of 7 Cards");
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
              c.setValue((int) Math.floor(Math.random()*13)+1);
              c.setSuit(Card.SUITS[(int) Math.floor(Math.random()*4)]);
-              
-           
+             System.out.println(c.getValue() + " " + c.getSuit());
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
