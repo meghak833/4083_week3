@@ -32,24 +32,26 @@ public class CardTrick {
             c.setSuit(Card.SUITS[randomNum]);
             switch (randomNum) {
                 case 0:
-                    System.out.println("You got " + c.getValue + " of Hearths");
+                    System.out.println("You got " + c.getValue() + " of Hearths");
                     break;
                 case 1:
-                    System.out.println("You got " + c.getValue + "Diamonds");
+                    System.out.println("You got " + c.getValue() + " of Diamonds");
                     break;
                 case 2:
-                    System.out.println("You got " + c.getValue + "Spades");
+                    System.out.println("You got " + c.getValue() + " of Spades");
                     break;
                 default:
-                    System.out.println("You got " + c.getValue + "Clubs");
+                    System.out.println("You got " + c.getValue() + " of Clubs");
                     break;
             }
            
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
-        
+        int luckyCard = 6;
         //Then report the result here
+        System.out.println("Your lucky card is: " + luckyCard + "of Clubs");
+        
     }
     
 }
