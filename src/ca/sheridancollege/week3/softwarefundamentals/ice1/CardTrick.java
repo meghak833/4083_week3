@@ -50,7 +50,11 @@ public class CardTrick {
             else if(randomSuitValue == 3){
                 c.setSuit(Card.SUITS[3]);
             }
+        }
+        //Code to print the 7 deck of randomly generated cards
 
+        for(int i = 0; i< magicHand.length; i++){
+            System.out.println(magicHand[i].getSuit() +" - " + magicHand[i].getValue());
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
