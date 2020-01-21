@@ -29,7 +29,7 @@ public class CardTrick {
             c.setValue(random1);
             c.setSuit(Card.SUITS[random2]);
 
-           
+            
 
         }
         Card c2 =new Card();
