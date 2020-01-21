@@ -33,6 +33,9 @@ public class CardTrick {
             c.setValue(rand.nextInt(max)+ 1);
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             c.setSuit(Card.SUITS[rand.nextInt(upper)]);
+            
+            System.out.println(c.getValue());
+            System.out.println(c.getSuit());
         }
         
         //insert code to ask the user for Card value and suit, create their card
