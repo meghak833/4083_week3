@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Name : Sangeetha Theresa Pattara
+ * Student Number : 991578554
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 

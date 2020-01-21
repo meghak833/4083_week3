@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Name : Sangeetha Theresa Pattara     
+ * Student Number : 991578554
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
@@ -20,9 +19,12 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            Math.random
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+          
+           c.setValue((int) Math.floor(Math.random()*13)+1);
+          
+           c.setSuit(Card.SUITS[(int) Math.floor(Math.random()*4)]);
+           System.out.println( c.getValue()+c.getSuit());
+            
         }
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
