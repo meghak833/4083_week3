@@ -35,8 +35,15 @@ public class CardTrick {
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
         
-        //insert code to ask the user for Card value and  or Hard code it, create their card
-        
+        Card a = new Card();
+        a.setSuit("Spades");
+        a.setValue(1);
+        for(sub int = 0; sub < 7; sub++){
+            int a = 1;
+        System.out.println("The " + [a] + " card suit is: " + [sub]magicHand.getSuit() + " and the value is: " +[sub]magicHand.getValue());
+        a++;
+        }
+        System.out.println("The users card suit is: Spades and the value is: Ace.");
         //Then report the result here
     }
     
