@@ -14,6 +14,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * add your name as a modifier.
  *
  * @author Megha Patel
+ * Sunil Sunichura 991 578 383
  */
 public class Card {
 
