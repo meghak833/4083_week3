@@ -28,6 +28,12 @@ public class CardTrick {
             System.out.println(c.getSuit());
             System.out.println(c.getValue());
         }
+       Card manualHand =new Card();
+       manualHand.setValue(4);
+       manualHand.setSuit("Diamonds");
+       System.out.println(manualHand.getSuit());
+       System.out.println(manualHand.getValue());
+        
        
         //insert code to ask the user for Card value and  or Hard code it, create their card
         
