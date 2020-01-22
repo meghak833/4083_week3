@@ -12,6 +12,7 @@ import java.util.Scanner;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author Megha Patel
+ * @modifier Aida Bizhanova
  */
 public class CardTrick {
     
@@ -50,9 +51,27 @@ public class CardTrick {
         System.out.println("My Card is " + myCard.getSuit()+" "+myCard.getValue());
         
         
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Pick a number");
+        int num = scan.nextInt();
+        scan.nextLine();
+        System.out.println("Pick a suit");
+        String val = scan.nextLine();
+        
+        
+        
+        Card myCard = new Card();
+        myCard.setSuit(val);
+        myCard.setValue(num);
+        
+        System.out.println("My Card is " + myCard.getSuit()+" "+myCard.getValue());
+        
+        
         //insert code to ask the user for Card value and  or Hard code it, create their card
         
         //Then report the result here
     }
+    
     
 }
