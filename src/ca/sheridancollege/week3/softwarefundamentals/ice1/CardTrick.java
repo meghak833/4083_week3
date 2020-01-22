@@ -3,6 +3,7 @@
  * Student Number : 991578554
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -15,6 +16,7 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
+        Card luckyCard =new Card();
         
         //to print the 7 cards
         System.out.println("The hand of 7 Cards");
@@ -24,11 +26,33 @@ public class CardTrick {
              c.setValue((int) Math.floor(Math.random()*13)+1);
              c.setSuit(Card.SUITS[(int) Math.floor(Math.random()*4)]);
              System.out.println(c.getValue() + " " + c.getSuit());
+             magicHand[i]=c;
         }
         
-        //insert code to ask the user for Card value and  or Hard code it, create their card
+        //to pick the Lucky card
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Pick the Lucky card\nEnter the value - 1 to 13");
+        luckyCard.setValue(sc.nextInt());  
+        System.out.println("Enter the suit(Hearts, Diamonds, Spade, Clubs");
+        sc.nextLine();
+        luckyCard.setSuit(sc.nextLine());  
+        System.out.println(luckyCard);
+        boolean cardPresent = false;
         
-        //Then report the result here
+       // to check  if the Lucky card is in the hand
+        for (int i=0; i<magicHand.length; i++){
+            if(magicHand[i].getValue()==luckyCard.getValue() && 
+            magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit()) ){
+            cardPresent = true;
+            break;
+            }  
+        
+        } 
+       if(cardPresent == true)
+       System.out.println("The Lucky card is in the hand ");
+       else
+       System.out.println("The Lucky card is not in the hand ");
+           
     }
     
 }

@@ -47,6 +47,8 @@ public class Card {
         this.value = value;
     }
    
-   
+   public String toString(){
+       return "The Lucky Card is : "+value+" "+suit;
+   }
     
 }
