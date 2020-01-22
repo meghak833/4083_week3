@@ -20,7 +20,7 @@ public class CardTrick {
  
         
         for (int i=0; i<magicHand.length; i++)
-        {
+        { //if statement for value of a card
             int a = 1 + (int)(Math.random() * 4);  
         if(a==1)
             card="Hearts";
