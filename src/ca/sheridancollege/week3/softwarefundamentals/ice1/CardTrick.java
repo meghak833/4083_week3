@@ -20,14 +20,16 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            c.setValue((int)Math.random());
+            c.setValue((int)Math.random()+1);
             for(int j =0; j<magicHand.length; j++){
-                c.setSuit(Card.SUITS[((int)Math.random())]);
+                c.setSuit(Card.SUITS[((int)Math.random()*13+1)]);
             }
         }
-        
+        Card c = new Card();
         //insert code to ask the user for Card value and  or Hard code it, create their card
-        
+        c.getValue();
+        System.out.println(c.getValue());
+        System.out.println(c.getSuit());
         //Then report the result here
     }
     
