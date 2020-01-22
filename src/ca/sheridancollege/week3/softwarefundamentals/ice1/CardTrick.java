@@ -36,7 +36,10 @@ public class CardTrick {
         System.out.println("Enter the suit(Hearts, Diamonds, Spade, Clubs");
         sc.nextLine();
         luckyCard.setSuit(sc.nextLine());  
+        
+        //to print the Lucky Card
         System.out.println(luckyCard);
+       
         boolean cardPresent = false;
         
        // to check  if the Lucky card is in the hand
