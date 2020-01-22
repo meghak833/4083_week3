@@ -86,7 +86,7 @@ public class CardTrick {
         System.out.println("User's Lucky Card is : "+ 
                 Card.CARD_VALUES[userLuckyCard.getValue()]  + " of " + 
                 userLuckyCard.getSuit());
-        
+        System.out.println("Program end.");
         
     }
 
