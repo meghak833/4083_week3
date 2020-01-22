@@ -22,7 +22,7 @@ public class CardTrick {
             Card c = new Card();
             c.setValue((int)Math.random());
             for(int j =0; j<magicHand.length; j++){
-            c.setSuit(Card.SUITS[j]) = ((int)Math.random()*13 + 1);
+                c.setSuit(Card.SUITS[((int)Math.random())]);
             }
         }
         
