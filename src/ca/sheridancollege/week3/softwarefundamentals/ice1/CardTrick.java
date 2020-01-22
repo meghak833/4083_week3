@@ -17,22 +17,29 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        Card[] magicHand = new Card[7];
-        Scanner sc=new Scanner(System.in);
-        for(int i=0; i<magicHand.length; i++)
+        //Card[] magicHand = new Card[7];
+        Card[] c=new Card[7];
+        for (int i=0; i<c.length; i++)
         {
-            Card c = new Card();
-            c.setValue((int)(Math.random()*13+1));
-             c.setSuit(Card.SUITS[(int)(Math.random()* 4 + 0)]);
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            System.out.println(c.getSuit());
-            System.out.println(c.getValue());
+            
+            c[i]=getCard();
+            System.out.println(c[i].getSuit());
+            System.out.println(c[i].getValue());
+            
+                    
         }
-        
-        //insert code to ask the user for Card value and  or Hard code it, create their card
-        
-        //Then report the result here
+           Card manualHand=new Card("Diamonds",9);
+           System.out.println("Lucky card:");
+           System.out.println(manualHand.getSuit());
+           System.out.println(manualHand.getValue());
+
+        }
+    public static Card getCard(){
+        int value =((int)(Math.random()*13 + 1));
+        String suit=(Card.SUITS[(int)(Math.random()* 4 + 0)]);
+        return new Card(suit,value);
+    }
+           
     }
     
-}
+

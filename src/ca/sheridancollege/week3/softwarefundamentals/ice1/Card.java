@@ -47,7 +47,12 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
+    /*
+    created constructor to store array of randomly generated cards
+    */
+   public Card(String suit,int value){
+   this.suit=suit;
+   this.value=value;}
    
     
 }
