@@ -19,9 +19,17 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
+        Scanner in = new Scanner(System.in);
+        
         Card[] magicHand = new Card[7];
         
         //insert code to ask the user for Card value and  or Hard code it, create their card
+        System.out.println("Enter card value: ");
+        System.out.println("Enter a suite: ");
+        
+        int userValue = in.nextInt();
+        in.nextLine();
+        String userSuite = in.nextLine();
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -62,4 +70,5 @@ public class CardTrick {
         //Then report the result here
     }
     
+}
 }
