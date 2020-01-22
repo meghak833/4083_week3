@@ -6,6 +6,7 @@
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then
@@ -16,33 +17,45 @@ import java.util.Random;
  */
 public class CardTrick {
 
-    private static Random value = new Random();
-    private static Random suits = new Random();
+    private final Random VALUE = new Random();
+    private final Random SUITS = new Random();
 
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
 
+        CardTrick cardValue = new CardTrick();
+        CardTrick cardSuit = new CardTrick();
+
         for (int i = 0; i < magicHand.length; i++) {
-            Card c = new Card();
-            c.setValue(value());
-            c.setSuit(Card.SUITS[suit()]);
-            
-            system.out.println(c.getValue() + " of " + c.getSuit());
-
+            magicHand[i] = new Card();
+            magicHand[i].setValue(cardValue.value());
+            magicHand[i].setSuit(Card.SUITS[cardSuit.suit()]);
         }
+        Scanner pickValue = new Scanner(System.in);
+        System.out.print("Pick a number: ");
+        int numValue = pickValue.nextInt();
 
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        Scanner pickSuit = new Scanner(System.in);
+        System.out.print("Pick a suit: ");
+        String suitValue = pickSuit.nextLine();
+        System.out.println();
+
+        for (int j = 0; j < magicHand.length; j++) {
+            
+            if (numValue == magicHand[j].getValue() && magicHand[j].getSuit().equals(suitValue)) {
+                System.out.println("There is a match to your card");
+                break; 
+            }
+        }
     }
 
-    public static int value() {
-        int val = value.nextInt(13) + 1;
+    public int value() {
+        int val = VALUE.nextInt(13) + 1;
         return val;
     }
 
-    public static int suit() {
-        int sui = suits.nextInt(4);
+    public int suit() {
+        int sui = SUITS.nextInt(4);
         return sui;
     }
 
